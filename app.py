@@ -50,4 +50,4 @@ def dwt_api():
         return send_file(output_tempfile.name, as_attachment=True, attachment_filename='compressed_video.mp4')
 
 if __name__ == '__main__':
-    app.run(debug=False)  # Set debug=True for debugging purposes
+    app.run()
