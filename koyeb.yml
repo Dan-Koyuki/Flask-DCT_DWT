@@ -1,0 +1,20 @@
+name: video_compressor
+
+routes:
+  - name: default
+    routes:
+      - path: /
+        target: app
+
+services:
+  - name: app
+    type: web
+    buildpacks:
+      - heroku-community/apt
+      - heroku/python
+    source:
+      type: git
+      url: https://github.com/Dan-Koyuki/Flask-DCT_DWT.git
+    env:
+      - name: FLASK_ENV
+        value: production
